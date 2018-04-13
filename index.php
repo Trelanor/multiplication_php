@@ -2,21 +2,16 @@
 	<html lang="fr">
 		<head>
 			<meta charset="utf-8">
-			<title>multiplication avec PHP</title>
-			
+			<title>multiplication avec PHP</title>			
 			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
 			<link rel="stylesheet" href="style.css">
-			<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
-			
-		</head>
-		
-		<body>
-			
+			<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />			
+		</head>		
+		<body>			
 			<div class="container">
 				<div class="row">
 					<h1>Tables de multiplications avec PHP</h1>
-					<p>Veuillez choisir une table de multiplication</p>
-						
+					<p>Veuillez choisir une table de multiplication</p>		
 					<div class="input-field col s12">
 						<form action="index.php" method="post" name="table">
 							<select name="table" id="select">
@@ -36,26 +31,21 @@
 								<i class="material-icons right"></i>					 			
 							</button>	
 						</form>
-					</div>
-					
-					<br>
-					
+					</div>					
+					<br>					
 					<div class="input-field col s12">					
 						<form method="post" action="index.php" name="table">						
 							<?php
 								for($i = 1; $i <= 10; $i++) {
 									echo '<p><label><input type="checkbox" name="table[]" value="'.$i.'"><span>Table du '.$i.'</span></label></p>';
 								}
-							?>
-						
+							?>						
 							<br>
 							<button class="btn waves-effect waves-light" type="submit" name="action">Choisir
 								<i class="material-icons right"></i>					 			
 							</button>
 						</form>
-					</div>
-					
-					
+					</div>										
 						<?php
 						if(!empty($_POST) && isset($_POST['table'])) {
 							$table = $_POST['table'];
@@ -82,8 +72,7 @@
 						}					
 					?>
 					<br><br>
-					<div id="test">
-						
+					<div id="test">						
 						<p>Testez ici vos connaissances !</p>
 						<div class="input-field col s12">
 							<form action="index.php" method="post" name="tabletest">
@@ -105,9 +94,7 @@
 								</button>	
 							</form>
 						</div>
-						<?php
-				
-						
+						<?php										
 							if(!empty($_POST) && isset($_POST['tabletest'])) {
 							
 								$randnumb = rand(1, 10);
@@ -119,11 +106,8 @@
 										<input type="hidden" name="randnumb" value="'.$randnumb.'">
 										<input type="hidden" name="multiplier" value="'.$tableTest.'">
 										<input type="submit" value="Réponse">
-									 </form>');
-					
-																															
-							}
-							
+									 </form>');																																				
+							}							
 							if(!empty($_POST ['proposition'])) {
 								
 								$proposition = $_POST['proposition'];
@@ -134,16 +118,12 @@
 									echo('Bravo vous avez trouvé la bonne réponse !');	
 								 } else {		
 									echo('Désolé vous vous êtes trompé !');
-								 }
-										
-							}
-						
-						?>
-						
+								 }										
+							}						
+						?>						
 					</div>
 				</div>
-			</div>
-			
+			</div>			
 					<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 			<script src="app.js"></script>		
 		</body>
