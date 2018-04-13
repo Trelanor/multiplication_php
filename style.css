@@ -1,0 +1,25 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+	color: black;
+	font-family: arial;
+}
+
+.container{
+	text-align: center;
+	width: 800px;
+	margin: auto;
+	padding-top: 30px;
+	padding-bottom: 100px;
+
+}
+
+form{
+	width: 50%;
+	margin: auto;
+	
+}
